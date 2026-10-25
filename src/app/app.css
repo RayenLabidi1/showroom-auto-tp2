@@ -1,0 +1,49 @@
+.auto-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e3e6eb;
+  border-radius: 20px;
+  box-shadow: 0 20px 48px rgba(15, 20, 30, 0.12);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.auto-details img {
+  flex: 1 1 340px;
+  max-width: 440px;
+  object-fit: contain;
+}
+
+.auto-details-text {
+  flex: 1 1 320px;
+}
+
+.auto-details h2 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  color: #14171c;
+}
+
+.auto-details .price {
+  margin: 0 0 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #b23b3b;
+}
+
+.auto-details .description {
+  color: #5c6470;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.auto-details ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #5c6470;
+}

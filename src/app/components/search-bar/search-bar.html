@@ -1,0 +1,33 @@
+<div class="search-box">
+  <label for="brand">Brand</label>
+  <input
+    #brandInput
+    type="text"
+    id="brand"
+    placeholder="BMW, Audi, Jaguar..."
+    (keyup.enter)="searchAutoList(brandInput.value)"
+  />
+  <fa-icon [icon]="faMagnifyingGlass" (click)="searchAutoList(brandInput.value)" />
+</div>
+
+@if (searched && foundAutos.length === 0) {
+  <p class="no-result">No car found for this brand.</p>
+}
+
+<div class="container">
+  @for (auto of foundAutos; track auto.id) {
+    <div class="auto-card">
+      <img [src]="'images/' + auto.photo" alt="{{ auto.brand }}" />
+
+      <div class="details">
+        <h3>{{ auto.brand }} {{ auto.model }}</h3>
+        <p>
+          Power : {{ auto.power }} <br />
+          Price : {{ auto.price }} DNT <br />
+          Only {{ auto.availability }} units in stock
+        </p>
+        <button (click)="selectedAuto(auto)">View</button>
+      </div>
+    </div>
+  }
+</div>
